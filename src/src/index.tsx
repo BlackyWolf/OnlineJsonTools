@@ -3,6 +3,9 @@ import { Route, Router, Routes } from '@solidjs/router';
 import { render } from 'solid-js/web';
 import { App } from './App';
 import './index.css';
+import { Jwt } from './pages/Jwt';
+import { Home } from './pages/Home';
+import { Formatting } from './pages/Formatting';
 
 
 const root = document.getElementById('root');
@@ -17,7 +20,11 @@ render(
     () => (
         <Router>
             <Routes>
-                <Route path="/" component={App} />
+                <Route path="/" component={App}>
+                    <Route path="/" component={Home} />
+                    <Route path="/jwt" component={Jwt} />
+                    <Route path="/formatting" component={Formatting} />
+                </Route>
             </Routes>
         </Router>
     ),
