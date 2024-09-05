@@ -1,12 +1,9 @@
 /* @refresh reload */
-import { Route, Router, Routes } from '@solidjs/router';
+import { Route, Router } from '@solidjs/router';
 import { render } from 'solid-js/web';
 import { App } from './App';
 import './index.css';
-import { Jwt } from './pages/Jwt';
-import { Home } from './pages/Home';
-import { Formatting } from './pages/Formatting';
-
+import { Formatting, Home, Jwt, KeyGen } from './pages';
 
 const root = document.getElementById('root');
 
@@ -19,13 +16,12 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 render(
     () => (
         <Router>
-            <Routes>
-                <Route path="/" component={App}>
-                    <Route path="/" component={Home} />
-                    <Route path="/jwt" component={Jwt} />
-                    <Route path="/formatting" component={Formatting} />
-                </Route>
-            </Routes>
+            <Route path="/" component={App}>
+                <Route path="/" component={Home} />
+                <Route path="/jwt" component={Jwt} />
+                <Route path="/formatting" component={Formatting} />
+                <Route path="/keygen" component={KeyGen} />
+            </Route>
         </Router>
     ),
     root!

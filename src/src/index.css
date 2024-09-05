@@ -12,14 +12,30 @@ h1 {
     @apply text-4xl font-semibold mb-4;
 }
 
+h6 {
+    @apply text-lg font-semibold mb-2;
+}
+
 p {
-    @apply my-2;
+    @apply my-6;
 }
 
 ul {
     @apply list-disc py-2 px-8;
 }
 
+.ul-none {
+    @apply list-none py-0 px-0;
+}
+
 .link {
     @apply text-blue-400 underline;
+}
+
+code {
+    @apply bg-gray-200 border px-1 text-rose-600 border-gray-300 rounded whitespace-pre font-mono;
+}
+
+code.big {
+    @apply block bg-gray-200 py-2 px-4 border border-gray-300 rounded whitespace-pre-wrap mb-6 font-mono;
 }

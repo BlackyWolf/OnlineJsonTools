@@ -20,6 +20,9 @@ export const NavBar = () => {
                     <A href="/formatting" class="ml-4 px-2 py-1 rounded-md hover:bg-blue-500 hover:text-white duration-150 transition">
                         JSON Formatting
                     </A>
+                    <A href="/keygen" class="ml-4 px-2 py-1 rounded-md hover:bg-blue-500 hover:text-white duration-150 transition">
+                        Key Gen
+                    </A>
                 </div>
             </nav>
 
@@ -43,6 +46,9 @@ export const NavBar = () => {
                     </A>
                     <A href="/formatting" class="px-2 py-1 rounded-md hover:bg-blue-500 hover:text-white duration-150 transition">
                         JSON Formatting
+                    </A>
+                    <A href="/keygen" class="px-2 py-1 rounded-md hover:bg-blue-500 hover:text-white duration-150 transition">
+                        Key Gen
                     </A>
                 </div>
             </nav>

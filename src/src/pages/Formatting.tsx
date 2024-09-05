@@ -4,11 +4,13 @@ export const Formatting = () => {
     const [json, setJson] = createSignal<string>();
 
     const formattedJson = () => {
-        if (!json()) return '';
+        const jsonValue = json();
+
+        if (!jsonValue) return '';
 
         try {
-            return JSON.stringify(JSON.parse(json().trim()), null, 4);
-        } catch (error) {
+            return JSON.stringify(JSON.parse(jsonValue.trim()), null, 4);
+        } catch (error: any) {
             return error.message;
         }
     };
