@@ -4,9 +4,11 @@ export const Jwt = () => {
     const [token, setToken] = createSignal<string>();
 
     const decodedToken = () => {
-        if (!token()) return '';
+        const jwtToken = token();
 
-        const tokenParts = token().trim().replaceAll('"', '').split('.');
+        if (!jwtToken) return '';
+
+        const tokenParts = jwtToken.trim().replaceAll('"', '').split('.');
 
         if (tokenParts.length !== 3) return 'Invalid token';
 
